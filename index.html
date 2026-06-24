@@ -1,111 +1,14 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>С 1 Апреля!</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background-color: #1a1a1a;
-            color: #e0e0e0;
-            text-align: center;
-            padding: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-        }
-        .container {
-            max-width: 650px;
-            background: #2a2a2a;
-            padding: 30px 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-            border: 1px solid #444;
-        }
-        h1 {
-            color: #00e676; /* Яркий зеленый */
-            font-size: 2.5em;
-        }
-        p {
-            font-size: 1.2em;
-            line-height: 1.7;
-        }
-        .joke {
-            background: #333;
-            border-left: 5px solid #00e676;
-            margin: 25px 0;
-            padding: 15px 20px;
-            text-align: left;
-            border-radius: 0 8px 8px 0;
-            font-style: italic;
-        }
-        .highlight {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #ff4081; /* Яркий розовый */
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-top: 20px;
-            display: inline-block;
-            text-shadow: 0 0 10px #ff4081;
-        }
-        .outro {
-            margin-top: 30px;
-            font-size: 1em;
-            color: #888;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <h1>С 1 апреля! 🎉</h1>
-        
-        <p>Вы реально подумали, что я так быстро бесплатный хостинг найду?) Сегодня ничему верить нельзя (даже этому).</p>
-
-        <div class="joke">
-            <p>Шел медведь по лесу. Видит - машина горит. Сел в неё. И сгорел.</p>
-            <p class="outro">Жалко мишку...</p>
-        </div>
-
-        <div class="joke">
-            <p>Чем глубже в лес - шкибиди доб доб ес ес</p>
-        </div>
-
-        <div class="joke">
-            <p>Чем глубже в лес - иф элс иф элс...</p>
-        </div>
-        
-        <p class="highlight">У ВАС СПИНА БЕЛАЯ!</p>
-        
-        <p class="outro">Если что я в начале напиздел, хостинг уже нашёл, вы же видите сейчас этот сайт.) Там просто с базой данных проблема, я решу и всё сделаю.</p>
-    </div>
-
-    <audio id="aprilFoolsMusic" loop style="display:none;">
-        <source src="musik.mp3" type="audio/mpeg">
-    </audio>
-    <script>
-        const audio = document.getElementById('aprilFoolsMusic');
-        
-        // Функция для запуска музыки.
-        function startMusic() {
-            // Проверяем, играет ли уже музыка, чтобы не запускать дважды.
-            if (audio.paused) {
-                audio.play().catch(error => {
-                    console.error("Ошибка воспроизведения:", error);
-                });
-            }
-        }
-
-        // Добавляем обработчики для первого взаимодействия пользователя.
-        // Опция { once: true } автоматически удалит обработчик после первого вызова.
-        document.addEventListener('click', startMusic, { once: true });
-        document.addEventListener('keydown', startMusic, { once: true });
-        document.addEventListener('touchstart', startMusic, { once: true });
-    </script>
-
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Огарев - точка знаний</title>
+    <script type="module" crossorigin src="/assets/index.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index.css">
+  </head>  
+  <body>
+    <div id="root"></div>
+  </body>
 </html>
